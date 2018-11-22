@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class CategoryModel: NSObject {
+    
+    var CategoryId : Int = Int()
+    var CategoryName: String = String()
+    var CategoryImage : String!
+    var No : Int = Int()
+    
+}

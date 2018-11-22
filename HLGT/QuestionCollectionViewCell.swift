@@ -10,4 +10,8 @@ import UIKit
 
 class QuestionCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var collectionImage: UIImageView!
+    
+    @IBOutlet weak var collectionText: UILabel!
+    
 }

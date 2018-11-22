@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SWRevealViewController: UIViewController {
+class SWRevealCustomViewController: UIViewController {
     
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
@@ -18,7 +18,12 @@ class SWRevealViewController: UIViewController {
         super.viewDidLoad()
 
         menuBarButton.target = revealViewController()
-        menuBarButton.target = 
+        menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        navigationController?.navigationBar.tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 42/255, green: 210/255, blue: 201/255, alpha: 1.0)
+        navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([NSAttributedString.Key.foregroundColor.rawValue: UIColor.white])
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,4 +42,10 @@ class SWRevealViewController: UIViewController {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

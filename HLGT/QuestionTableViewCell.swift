@@ -9,16 +9,14 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    @IBOutlet weak var answerId: UILabel!
+    
+    @IBOutlet weak var borderColorLeft: UIImageView!
+    
+    @IBOutlet weak var answerImageText: UILabel!
+    
+    @IBOutlet weak var answerContent: UILabel!
+    
+    @IBOutlet weak var answerImage: UIImageView!
 }

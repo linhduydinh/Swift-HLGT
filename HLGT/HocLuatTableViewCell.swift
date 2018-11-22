@@ -9,6 +9,14 @@
 import UIKit
 
 class HocLuatTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var hocLuatImage: UIImageView!
+    
+    @IBOutlet weak var hocLuatTitle: UILabel!
+    
+    
+    @IBOutlet weak var categoryId: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

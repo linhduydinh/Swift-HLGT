@@ -8,12 +8,18 @@
 
 import UIKit
 
-class MenuBarViewController: UIViewController {
+class MenuBarTableViewController: UITableViewController {
+    
+    
+    @IBOutlet weak var menuBarButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //menuBarButton.target = revealViewController()
+        //menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
